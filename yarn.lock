@@ -562,14 +562,23 @@ __metadata:
     "@types/node": 18.15.12
     "@types/react": 18.0.37
     "@types/react-dom": 18.0.11
+    chart.js: 3.5.0
     eslint: 8.38.0
     eslint-config-next: 13.3.0
     next: 13.3.0
     react: 18.2.0
+    react-chartjs-2: 3.0.2
     react-dom: 18.2.0
     typescript: 5.0.4
   languageName: unknown
   linkType: soft
+
+"chart.js@npm:3.5.0":
+  version: 3.5.0
+  resolution: "chart.js@npm:3.5.0"
+  checksum: 9ce5400b3e98000511a727968bbbbc06988e9b76e964f7fb22c078cd733756604a04692c255d4e91a8c7a0cb963f9e40190bee16bb2c9640bd34a255267aff5f
+  languageName: node
+  linkType: hard
 
 "chartjs-dashboard@workspace:.":
   version: 0.0.0-use.local
@@ -1831,6 +1840,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash@npm:^4.17.19":
+  version: 4.17.21
+  resolution: "lodash@npm:4.17.21"
+  checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
+  languageName: node
+  linkType: hard
+
 "loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
@@ -2210,6 +2226,18 @@ __metadata:
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
   checksum: b676f8c040cdc5b12723ad2f91414d267605b26419d5c821ff03befa817ddd10e238d22b25d604920340fd73efd8ba795465a0377c4adf45a4a41e4234e42dc4
+  languageName: node
+  linkType: hard
+
+"react-chartjs-2@npm:3.0.2":
+  version: 3.0.2
+  resolution: "react-chartjs-2@npm:3.0.2"
+  dependencies:
+    lodash: ^4.17.19
+  peerDependencies:
+    chart.js: ^3.1.0
+    react: ^16.8.0 || ^17.0.0
+  checksum: 684d6d18d46a7bae58d249e5a7f5b165a4f4d36fb2f4ad9bf6bd7b9d76a7d61d237c9830dfb922cd1a8d42f85cb3e5d99fef7befe3b67ec9b40c4fcc661cdf0a
   languageName: node
   linkType: hard
 
