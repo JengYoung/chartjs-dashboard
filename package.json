@@ -1,0 +1,13 @@
+{
+  "name": "chartjs-dashboard",
+  "packageManager": "yarn@3.3.0",
+  "workspaces": [
+    "3.x/**/*"
+  ],
+  "scripts": {
+    "dev:chart3:next10": "yarn workspace chart-v3-next-v10 dev",
+    "build:chart3:next10": "yarn workspace chart-v3-next-v10 build",
+    "start:chart3:next10": "yarn workspace chart-v3-next-v10 start",
+    "lint:chart3:next10": "yarn workspace chart-v3-next-v10 lint"
+  }
+}
