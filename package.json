@@ -10,5 +10,8 @@
     "build:chart3:next10": "yarn workspace chart-v3-next-v10 build",
     "start:chart3:next10": "yarn workspace chart-v3-next-v10 start",
     "lint:chart3:next10": "yarn workspace chart-v3-next-v10 lint"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^7.0.0"
   }
 }

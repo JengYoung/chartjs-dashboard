@@ -19,9 +19,11 @@
     "styled-components": "5.2.1"
   },
   "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
     "@types/node": "18.15.12",
     "@types/react": "^18.0.38",
     "@types/styled-components": "^5.1.26",
+    "babel-plugin-root-import": "^6.6.0",
     "babel-plugin-styled-components": "^2.1.1",
     "sass": "^1.62.0",
     "styled-reset": "^4.4.6",
