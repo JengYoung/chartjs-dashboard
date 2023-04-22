@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { ReactElement, useRef } from 'react'
 
 import {
   Chart as ChartJS,
@@ -11,6 +11,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { BaseLayout } from '../../components/layouts/BaseLayout';
 
 ChartJS.register(
   CategoryScale,
@@ -64,4 +65,9 @@ export default function Home() {
     </main>
   )
 }
-``
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <BaseLayout>{page}</BaseLayout>
+  )
+}
