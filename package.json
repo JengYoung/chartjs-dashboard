@@ -4,6 +4,7 @@
   "workspaces": [
     "3.x/**/*"
   ],
+  "private": true,
   "scripts": {
     "dev:chart3:next10": "yarn workspace chart-v3-next-v10 dev",
     "build:chart3:next10": "yarn workspace chart-v3-next-v10 build",
