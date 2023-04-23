@@ -1,16 +1,25 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, useTheme } from 'styled-components';
 
 interface IHamburgerButton {
   ariaLabel?: string;
+  color?: string;
 }
 
-export function HamburgerButton({ ariaLabel }: IHamburgerButton) {
+interface ILineStyle {
+  $color: string;
+}
+
+export function HamburgerButton({ ariaLabel, color }: IHamburgerButton) {
+  const theme = useTheme();
+
+  const lineColor = color ?? theme.color.white;
+
   return (
     <HamburgerButton.Container aria-label={ariaLabel}>
-      <HamburgerButton.Top />
-      <HamburgerButton.Middle />
-      <HamburgerButton.Bottom />
+      <HamburgerButton.Top $color={lineColor} />
+      <HamburgerButton.Middle $color={lineColor} />
+      <HamburgerButton.Bottom $color={lineColor} />
     </HamburgerButton.Container>
   );
 }
@@ -28,17 +37,20 @@ HamburgerButton.Container = styled.button`
   background-color: transparent;
 `;
 
-HamburgerButton.Top = styled.div`
+HamburgerButton.Top = styled.div<ILineStyle>`
   ${HamburgerLineCSS}
   margin: 0 0 4px;
+  background-color: ${props => props.$color};
 `;
 
-HamburgerButton.Middle = styled.div`
+HamburgerButton.Middle = styled.div<ILineStyle>`
   ${HamburgerLineCSS}
   margin: 4px 0;
+  background-color: ${props => props.$color};
 `;
 
-HamburgerButton.Bottom = styled.div`
+HamburgerButton.Bottom = styled.div<ILineStyle>`
   ${HamburgerLineCSS}
   margin: 4px 0 0;
+  background-color: ${props => props.$color};
 `;
