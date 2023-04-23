@@ -2,28 +2,46 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-interface IDefaultButton {
+interface IDefaultButtonBaseProps {
   className?: string;
   children?: ReactNode;
+  ariaLabel?: string;
+  onClick?: () => void;
+  onSubmit?: () => void;
+  disabled?: boolean;
+}
+interface IDefaultButton extends IDefaultButtonBaseProps {
   position?: string;
   width?: string;
   height?: string;
   margin?: string;
   padding?: string;
   border?: string;
-  borderRadius?: string;
   background?: string;
-  backgroundColor?: string;
-  ariaLabel?: string;
-  keyIndex?: string;
-  onClick?: () => void;
-  onSubmit?: () => void;
   fontSize?: string;
   fontWeight?: string;
   color?: string;
-  disabled?: boolean;
+  borderRadius?: string;
+  backgroundColor?: string;
   disabledColor?: string;
   disabledBackgroundColor?: string;
+}
+
+interface IDefaultButtonStyle extends IDefaultButtonBaseProps {
+  $position?: string;
+  $width?: string;
+  $height?: string;
+  $margin?: string;
+  $padding?: string;
+  $border?: string;
+  $background?: string;
+  $fontSize?: string;
+  $fontWeight?: string;
+  $color?: string;
+  $borderRadius?: string;
+  $backgroundColor?: string;
+  $disabledColor?: string;
+  $disabledBackgroundColor?: string;
 }
 
 export function DefaultButton({
@@ -38,7 +56,6 @@ export function DefaultButton({
   background,
   backgroundColor,
   ariaLabel,
-  keyIndex,
   onClick,
   onSubmit,
   children,
@@ -52,23 +69,22 @@ export function DefaultButton({
   return (
     <DefaultButton.Style
       className={className}
-      position={position}
-      width={width}
-      height={height}
-      margin={margin}
-      padding={padding}
-      border={border}
+      $position={position}
+      $width={width}
+      $height={height}
+      $margin={margin}
+      $padding={padding}
+      $border={border}
       $borderRadius={borderRadius}
-      background={background}
+      $background={background}
       $backgroundColor={backgroundColor}
       aria-label={ariaLabel}
-      keyindex={keyIndex}
       onClick={onClick}
       onSubmit={onSubmit}
       disabled={disabled}
-      fontSize={fontSize}
-      fontWeight={fontWeight}
-      color={color}
+      $fontSize={fontSize}
+      $fontWeight={fontWeight}
+      $color={color}
       $disabledColor={disabledColor}
       $disabledBackgroundColor={disabledBackgroundColor}
       whileHover={{ scale: disabled ? 1 : 1.02 }}
@@ -79,21 +95,21 @@ export function DefaultButton({
   );
 }
 
-DefaultButton.Style = styled((props) => <motion.button {...props} />)`
+DefaultButton.Style = styled(motion.button)<IDefaultButtonStyle>`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: ${(props) => props.position};
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-  margin: ${(props) => props.margin};
-  padding: ${(props) => props.padding};
+  position: ${(props) => props.$position};
+  width: ${(props) => props.$width};
+  height: ${(props) => props.$height};
+  margin: ${(props) => props.$margin};
+  padding: ${(props) => props.$padding};
   border-radius: ${(props) => props.$borderRadius};
-  border: ${(props) => props.border};
+  border: ${(props) => props.$border};
   background-color: ${(props) => props.$backgroundColor};
-  background: ${(props) => props.background};
+  background: ${(props) => props.$background};
   color: ${(props) => props.color};
-  font-size: ${(props) => props.fontSize};
+  font-size: ${(props) => props.$fontSize};
   font-weight: bold;
 
   cursor: pointer;
