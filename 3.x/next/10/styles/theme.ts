@@ -48,4 +48,4 @@ export const globalTheme = {
       },
     },
   },
-};
+} as const;
