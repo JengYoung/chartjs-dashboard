@@ -1379,7 +1379,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/is-prop-valid@npm:^0.8.8":
+"@emotion/is-prop-valid@npm:^0.8.2, @emotion/is-prop-valid@npm:^0.8.8":
   version: 0.8.8
   resolution: "@emotion/is-prop-valid@npm:0.8.8"
   dependencies:
@@ -1890,6 +1890,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-dom@npm:17.0.2":
+  version: 17.0.2
+  resolution: "@types/react-dom@npm:17.0.2"
+  dependencies:
+    "@types/react": "*"
+  checksum: 1725928a1c3a0026044e6401e6b53729e1a88849034fc67138d7784ec44a5132fe2e9056a19b741ccb462ff0ec0d8c2c01ef316bda19be0e31f2ead9346f600b
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:17.0.2":
   version: 17.0.2
   resolution: "@types/react@npm:17.0.2"
@@ -1908,6 +1917,13 @@ __metadata:
     "@types/react": "*"
     csstype: ^3.0.2
   checksum: 84f53b3101739b20d1731554fb7735bc2f3f5d050a8b392e9845403c8c8bbd729737d033978649f9195a97b557875b010d46e35a4538564a2d0dbcce661dbf76
+  languageName: node
+  linkType: hard
+
+"@types/uuid@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "@types/uuid@npm:9.0.1"
+  checksum: c472b8a77cbeded4bc529220b8611afa39bd64677f507838f8083d8aac8033b1f88cb9ddaa2f8589e0dcd2317291d0f6e1379f82d5ceebd6f74f3b4825288e00
   languageName: node
   linkType: hard
 
@@ -2672,12 +2688,15 @@ __metadata:
     "@svgr/webpack": ^5.5.0
     "@types/node": 18.15.12
     "@types/react": ^18.0.38
+    "@types/react-dom": ^18.0.11
     "@types/styled-components": ^5.1.26
+    "@types/uuid": ^9.0.1
     babel-plugin-root-import: ^6.6.0
     babel-plugin-styled-components: ^2.1.1
     chart.js: 3.5.0
     eslint: 8.38.0
     eslint-config-next: 13.3.0
+    framer-motion: ^10.12.4
     next: 10.2.3
     react: 17.0.2
     react-chartjs-2: 3.0.2
@@ -2686,6 +2705,7 @@ __metadata:
     styled-components: 5.2.1
     styled-reset: ^4.4.6
     typescript: 4.5.2
+    uuid: ^9.0.0
   languageName: unknown
   linkType: soft
 
@@ -3931,6 +3951,27 @@ __metadata:
   dependencies:
     is-callable: ^1.1.3
   checksum: 6c48ff2bc63362319c65e2edca4a8e1e3483a2fabc72fbe7feaf8c73db94fc7861bd53bc02c8a66a0c1dd709da6b04eec42e0abdd6b40ce47305ae92a25e5d28
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:^10.12.4":
+  version: 10.12.4
+  resolution: "framer-motion@npm:10.12.4"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    tslib: ^2.4.0
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: c131b546539937b5dbec6a89f2e3db946d5127f1cbf2f88268ef75089df30e81cdd0f4a5786f84b1bc98397d43a99aa6f7e187e6bba178548a9eeb3d39df7b91
   languageName: node
   linkType: hard
 
@@ -7287,6 +7328,15 @@ __metadata:
     is-typed-array: ^1.1.3
     which-typed-array: ^1.1.2
   checksum: 705e51f0de5b446f4edec10739752ac25856541e0254ea1e7e45e5b9f9b0cb105bc4bd415736a6210edc68245a7f903bf085ffb08dd7deb8a0e847f60538a38a
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "uuid@npm:9.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 8dd2c83c43ddc7e1c71e36b60aea40030a6505139af6bee0f382ebcd1a56f6cd3028f7f06ffb07f8cf6ced320b76aea275284b224b002b289f89fe89c389b028
   languageName: node
   linkType: hard
 
