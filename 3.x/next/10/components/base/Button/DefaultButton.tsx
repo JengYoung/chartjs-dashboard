@@ -108,7 +108,7 @@ DefaultButton.Style = styled(motion.button)<IDefaultButtonStyle>`
   border: ${(props) => props.$border};
   background-color: ${(props) => props.$backgroundColor};
   background: ${(props) => props.$background};
-  color: ${(props) => props.color};
+  color: ${(props) => props.$color};
   font-size: ${(props) => props.$fontSize};
   font-weight: bold;
 
