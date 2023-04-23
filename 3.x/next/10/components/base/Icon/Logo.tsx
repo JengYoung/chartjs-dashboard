@@ -1,5 +1,5 @@
 import React from 'react'
-import BaseIcon, { IBaseIconStyle } from '#/components/Icon/BaseIcon';
+import BaseIcon, { IBaseIconStyle } from '#/components/base/Icon/BaseIcon';
 import LogoSVG from '#/assets/logo.svg'
 
 export default function Logo({ width, height }: IBaseIconStyle) {
