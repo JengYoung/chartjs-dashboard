@@ -41,11 +41,7 @@ export const globalTheme = {
 
   layouts: {
     header: {
-      default: {
-        mobile: {
-          height: '50px',
-        },
-      },
+      height: '50px',
     },
   },
 } as const;

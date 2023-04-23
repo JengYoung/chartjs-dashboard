@@ -4,6 +4,16 @@ import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  #__next {
+    height: 100%;
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -16,6 +26,10 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  button {
+    background-color: transparent;
   }
 `;
 
