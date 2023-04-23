@@ -26,7 +26,7 @@ interface IDefaultButton {
   disabledBackgroundColor?: string;
 }
 
-export default function DefaultButton({
+export function DefaultButton({
   className,
   position,
   width,
