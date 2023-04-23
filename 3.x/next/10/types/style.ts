@@ -5,4 +5,4 @@ export enum EBorder {
   'left' = 'left',
 }
 
-export type IBorder = Record<keyof typeof EBorder, string | undefined>
+export type IBorder = Partial<Record<keyof typeof EBorder, string | undefined>>

@@ -1,3 +1,4 @@
+import { IBorder } from '#/types/style'
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 
@@ -9,6 +10,7 @@ interface IVStack {
   spacing?: string;
   justifyContent?: string;
   alignItems?: string;
+  border?: IBorder;
   children?: ReactNode;
 }
 
@@ -20,9 +22,10 @@ interface IVStackStyle {
   $spacing?: string;
   $justifyContent?: string;
   $alignItems?: string;
+  $border: IBorder;
 }
 
-export default function VStack({ width = '100%', height, spacing, margin, padding, alignItems, justifyContent, children }: IVStack) {
+export default function VStack({ width = '100%', height, spacing, margin, padding, alignItems, justifyContent, border, children }: IVStack) {
   return (
     <VStack.Style 
       $width={width}
@@ -32,6 +35,13 @@ export default function VStack({ width = '100%', height, spacing, margin, paddin
       $spacing={spacing} 
       $alignItems={alignItems} 
       $justifyContent={justifyContent}
+      $border={{
+        top: undefined,
+        right: undefined,
+        bottom: undefined,
+        left: undefined,
+        ...border
+      }}
     >
       {children}
     </VStack.Style>
@@ -50,6 +60,11 @@ VStack.Style = styled.div<IVStackStyle>`
 
   margin: ${props => props.$margin};
   padding: ${props => props.$padding};
+
+  border-top: ${props => props.$border.top};
+  border-right: ${props => props.$border.right};
+  border-bottom: ${props => props.$border.bottom};
+  border-left: ${props => props.$border.left};
 
   * {
     margin: ${props => props.$spacing};

@@ -6,6 +6,7 @@ interface IHeaderTextStyle {
   width?: string;
   height?: string;
   margin?: string;
+  padding?: string;
   fontFamily?: string;
   fontSize?: string;
   fontWeight?: string;
@@ -23,6 +24,7 @@ export default function HeaderText({
   width,
   height,
   margin,
+  padding,
   fontFamily,
   fontSize,
   fontWeight,
@@ -40,6 +42,7 @@ export default function HeaderText({
       width={width}
       height={height}
       margin={margin}
+      padding={padding}
       fontFamily={fontFamily}
       fontSize={fontSize}
       fontWeight={fontWeight}
@@ -59,6 +62,7 @@ HeaderText.Style = styled.h4<IHeaderTextStyle>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   margin: ${(props) => props.margin};
+  padding: ${(props) => props.padding};
   font-family: ${(props) => props.fontFamily};
   font-size: ${(props) => props.fontSize};
   font-weight: ${(props) => props.fontWeight};

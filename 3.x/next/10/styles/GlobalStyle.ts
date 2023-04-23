@@ -18,8 +18,13 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  h3 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
   h4 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
   }
   li {
