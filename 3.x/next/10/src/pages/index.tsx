@@ -17,6 +17,7 @@ import HStack from '#/components/base/Stack/HStack';
 import styled from 'styled-components';
 import Box from '#/components/base/Box/Box';
 import VStack from '#/components/base/Stack/VStack';
+import Table from '#/components/base/Table/DefaultTable';
 
 ChartJS.register(
   CategoryScale,
@@ -113,6 +114,33 @@ const salesDataOptions = {
   }
 }
 
+interface ITableData {
+  id: string;
+  today: number;
+  week: number;
+  total: number;
+}
+
+const table = {
+  data: [
+    { id: '1', today: 129, week: 5138, total: 1253262 }
+  ],
+  columns: [
+    {
+      label: '오늘',
+      key: 'today'
+    },
+    {
+      label: '1주일',
+      key: 'week',
+    },
+    {
+      label: '총 합계',
+      key: 'total'
+    }
+  ]
+}
+
 export default function Home() {
   const chartRef = useRef<ChartJS>(null);
   const salesChartRef = useRef<ChartJS>(null);
@@ -126,8 +154,8 @@ export default function Home() {
   return (
     <Home.Container>
       <HStack width="100%" height="100%">
-        <Box backgroundColor='yellow' padding="20px">
-          방문자
+        <Box padding="20px" border={{ right: '1px solid lightgray' }}>
+          <Table<ITableData> title="방문자 통계" data={table.data} columns={table.columns}/>
         </Box>
 
         <VStack width="100%">
@@ -140,7 +168,7 @@ export default function Home() {
             />
           </Box>
           
-          <Box backgroundColor='lightblue' padding="20px" height="100%">
+          <Box border={{ top: '1px solid lightgray'}} padding="20px" height="100%">
             <Box>
               <Doughnut
                 type="doughnut"
